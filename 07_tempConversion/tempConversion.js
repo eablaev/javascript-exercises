@@ -1,8 +1,22 @@
-const ftoc = function() {
+const ftoc = function(temp) {
+  let number =  (temp - 32)*.5556;
+
+  let result = Math.round(number * 10) / 10;
+
+  return result
+
 
 };
 
-const ctof = function() {
+const ctof = function(temp) {
+  let number = temp*(9/5) + 32;
+
+  let result = Math.round(number * 10) / 10;
+
+
+
+  return result
+
 
 };
 
@@ -11,3 +25,5 @@ module.exports = {
   ftoc,
   ctof
 };
+
+/// npm test tempConversion.spec.js
