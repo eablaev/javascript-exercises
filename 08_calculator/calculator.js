@@ -1,24 +1,38 @@
-const add = function() {
+const add = function(a,b) {
+  return a+b;
 	
 };
 
-const subtract = function() {
+const subtract = function(a,b) {
+  return a-b;
 	
 };
 
-const sum = function() {
+const sum = function(arr) {
+  return arr.reduce(
+   (prev,cur) => prev+cur,0);
 	
 };
 
-const multiply = function() {
-
+const multiply = function(arr) {
+return arr.reduce(
+  (prev,cur) => prev*cur);
 };
 
-const power = function() {
+const power = function(a,b) {
+  return a**b;
 	
 };
 
-const factorial = function() {
+const factorial = function(num) {
+  var result = num;
+  if (num === 0 || num === 1) 
+    return 1; 
+  while (num > 1) { 
+    num--;
+    result *= num;
+  }
+  return result;
 	
 };
 
@@ -31,3 +45,9 @@ module.exports = {
   power,
   factorial
 };
+
+
+
+
+///npm test calculator.spec.js
+
